@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9681274B2CF47F8B00E70A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681274A2CF47F8B00E70A7E /* AppDelegate.swift */; };
+		9681274D2CF47F8B00E70A7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681274C2CF47F8B00E70A7E /* SceneDelegate.swift */; };
+		9681274F2CF47F8B00E70A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681274E2CF47F8B00E70A7E /* ViewController.swift */; };
+		968127522CF47F8B00E70A7E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 968127512CF47F8B00E70A7E /* Base */; };
+		968127542CF47F9400E70A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968127532CF47F9400E70A7E /* Assets.xcassets */; };
+		968127572CF47F9400E70A7E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 968127562CF47F9400E70A7E /* Base */; };
+		968127622CF47F9400E70A7E /* HarmonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968127612CF47F9400E70A7E /* HarmonicTests.swift */; };
+		9681276C2CF47F9400E70A7E /* HarmonicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681276B2CF47F9400E70A7E /* HarmonicUITests.swift */; };
+		9681276E2CF47F9400E70A7E /* HarmonicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681276D2CF47F9400E70A7E /* HarmonicUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9681275E2CF47F9400E70A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9681273F2CF47F8B00E70A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968127462CF47F8B00E70A7E;
+			remoteInfo = Harmonic;
+		};
+		968127682CF47F9400E70A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9681273F2CF47F8B00E70A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968127462CF47F8B00E70A7E;
+			remoteInfo = Harmonic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		968127472CF47F8B00E70A7E /* Harmonic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harmonic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9681274A2CF47F8B00E70A7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9681274C2CF47F8B00E70A7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9681274E2CF47F8B00E70A7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		968127512CF47F8B00E70A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		968127532CF47F9400E70A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		968127562CF47F9400E70A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		968127582CF47F9400E70A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9681275D2CF47F9400E70A7E /* HarmonicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968127612CF47F9400E70A7E /* HarmonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicTests.swift; sourceTree = "<group>"; };
+		968127672CF47F9400E70A7E /* HarmonicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9681276B2CF47F9400E70A7E /* HarmonicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicUITests.swift; sourceTree = "<group>"; };
+		9681276D2CF47F9400E70A7E /* HarmonicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		968127442CF47F8B00E70A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9681275A2CF47F9400E70A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968127642CF47F9400E70A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9681273E2CF47F8B00E70A7E = {
+			isa = PBXGroup;
+			children = (
+				968127492CF47F8B00E70A7E /* Harmonic */,
+				968127602CF47F9400E70A7E /* HarmonicTests */,
+				9681276A2CF47F9400E70A7E /* HarmonicUITests */,
+				968127482CF47F8B00E70A7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		968127482CF47F8B00E70A7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				968127472CF47F8B00E70A7E /* Harmonic.app */,
+				9681275D2CF47F9400E70A7E /* HarmonicTests.xctest */,
+				968127672CF47F9400E70A7E /* HarmonicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		968127492CF47F8B00E70A7E /* Harmonic */ = {
+			isa = PBXGroup;
+			children = (
+				9681274A2CF47F8B00E70A7E /* AppDelegate.swift */,
+				9681274C2CF47F8B00E70A7E /* SceneDelegate.swift */,
+				9681274E2CF47F8B00E70A7E /* ViewController.swift */,
+				968127502CF47F8B00E70A7E /* Main.storyboard */,
+				968127532CF47F9400E70A7E /* Assets.xcassets */,
+				968127552CF47F9400E70A7E /* LaunchScreen.storyboard */,
+				968127582CF47F9400E70A7E /* Info.plist */,
+			);
+			path = Harmonic;
+			sourceTree = "<group>";
+		};
+		968127602CF47F9400E70A7E /* HarmonicTests */ = {
+			isa = PBXGroup;
+			children = (
+				968127612CF47F9400E70A7E /* HarmonicTests.swift */,
+			);
+			path = HarmonicTests;
+			sourceTree = "<group>";
+		};
+		9681276A2CF47F9400E70A7E /* HarmonicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9681276B2CF47F9400E70A7E /* HarmonicUITests.swift */,
+				9681276D2CF47F9400E70A7E /* HarmonicUITestsLaunchTests.swift */,
+			);
+			path = HarmonicUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		968127462CF47F8B00E70A7E /* Harmonic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968127712CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "Harmonic" */;
+			buildPhases = (
+				968127432CF47F8B00E70A7E /* Sources */,
+				968127442CF47F8B00E70A7E /* Frameworks */,
+				968127452CF47F8B00E70A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Harmonic;
+			productName = Harmonic;
+			productReference = 968127472CF47F8B00E70A7E /* Harmonic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9681275C2CF47F9400E70A7E /* HarmonicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968127742CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "HarmonicTests" */;
+			buildPhases = (
+				968127592CF47F9400E70A7E /* Sources */,
+				9681275A2CF47F9400E70A7E /* Frameworks */,
+				9681275B2CF47F9400E70A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9681275F2CF47F9400E70A7E /* PBXTargetDependency */,
+			);
+			name = HarmonicTests;
+			productName = HarmonicTests;
+			productReference = 9681275D2CF47F9400E70A7E /* HarmonicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		968127662CF47F9400E70A7E /* HarmonicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968127772CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "HarmonicUITests" */;
+			buildPhases = (
+				968127632CF47F9400E70A7E /* Sources */,
+				968127642CF47F9400E70A7E /* Frameworks */,
+				968127652CF47F9400E70A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				968127692CF47F9400E70A7E /* PBXTargetDependency */,
+			);
+			name = HarmonicUITests;
+			productName = HarmonicUITests;
+			productReference = 968127672CF47F9400E70A7E /* HarmonicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9681273F2CF47F8B00E70A7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					968127462CF47F8B00E70A7E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					9681275C2CF47F9400E70A7E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 968127462CF47F8B00E70A7E;
+					};
+					968127662CF47F9400E70A7E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 968127462CF47F8B00E70A7E;
+					};
+				};
+			};
+			buildConfigurationList = 968127422CF47F8B00E70A7E /* Build configuration list for PBXProject "Harmonic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9681273E2CF47F8B00E70A7E;
+			productRefGroup = 968127482CF47F8B00E70A7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				968127462CF47F8B00E70A7E /* Harmonic */,
+				9681275C2CF47F9400E70A7E /* HarmonicTests */,
+				968127662CF47F9400E70A7E /* HarmonicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		968127452CF47F8B00E70A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968127542CF47F9400E70A7E /* Assets.xcassets in Resources */,
+				968127572CF47F9400E70A7E /* Base in Resources */,
+				968127522CF47F8B00E70A7E /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9681275B2CF47F9400E70A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968127652CF47F9400E70A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		968127432CF47F8B00E70A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9681274F2CF47F8B00E70A7E /* ViewController.swift in Sources */,
+				9681274B2CF47F8B00E70A7E /* AppDelegate.swift in Sources */,
+				9681274D2CF47F8B00E70A7E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968127592CF47F9400E70A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968127622CF47F9400E70A7E /* HarmonicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968127632CF47F9400E70A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9681276E2CF47F9400E70A7E /* HarmonicUITestsLaunchTests.swift in Sources */,
+				9681276C2CF47F9400E70A7E /* HarmonicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9681275F2CF47F9400E70A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968127462CF47F8B00E70A7E /* Harmonic */;
+			targetProxy = 9681275E2CF47F9400E70A7E /* PBXContainerItemProxy */;
+		};
+		968127692CF47F9400E70A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968127462CF47F8B00E70A7E /* Harmonic */;
+			targetProxy = 968127682CF47F9400E70A7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		968127502CF47F8B00E70A7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968127512CF47F8B00E70A7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		968127552CF47F9400E70A7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968127562CF47F9400E70A7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9681276F2CF47F9400E70A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		968127702CF47F9400E70A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		968127722CF47F9400E70A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Harmonic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.Harmonic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		968127732CF47F9400E70A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Harmonic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.Harmonic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		968127752CF47F9400E70A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.HarmonicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Harmonic";
+			};
+			name = Debug;
+		};
+		968127762CF47F9400E70A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.HarmonicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Harmonic";
+			};
+			name = Release;
+		};
+		968127782CF47F9400E70A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.HarmonicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Harmonic;
+			};
+			name = Debug;
+		};
+		968127792CF47F9400E70A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartik.HarmonicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Harmonic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		968127422CF47F8B00E70A7E /* Build configuration list for PBXProject "Harmonic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9681276F2CF47F9400E70A7E /* Debug */,
+				968127702CF47F9400E70A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968127712CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "Harmonic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968127722CF47F9400E70A7E /* Debug */,
+				968127732CF47F9400E70A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968127742CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "HarmonicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968127752CF47F9400E70A7E /* Debug */,
+				968127762CF47F9400E70A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968127772CF47F9400E70A7E /* Build configuration list for PBXNativeTarget "HarmonicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968127782CF47F9400E70A7E /* Debug */,
+				968127792CF47F9400E70A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9681273F2CF47F8B00E70A7E /* Project object */;
+}
