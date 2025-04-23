@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         signInViewController.navigationBar.prefersLargeTitles = true
         signInViewController.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
         AuthManager.shared.getSession { session in
-            if session == nil {
+            if session != nil {
                 let tabBarViewController = TabBarViewController()
                 tabBarViewController.presenter = TabBarPresenter(view: tabBarViewController)
                 window.rootViewController = tabBarViewController
