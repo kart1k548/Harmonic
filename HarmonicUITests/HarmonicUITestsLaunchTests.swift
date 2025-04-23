@@ -1,10 +1,3 @@
-//
-//  HarmonicUITestsLaunchTests.swift
-//  HarmonicUITests
-//
-//  Created by Dagar, Kartik on 25/11/24.
-//
-
 import XCTest
 
 final class HarmonicUITestsLaunchTests: XCTestCase {
