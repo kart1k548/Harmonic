@@ -5,7 +5,7 @@ protocol SearchResultsViewControllerProtocol: AnyObject {
 }
 
 protocol SearchResultsViewControllerDelegate: AnyObject {
-    func didSelectTrack()
+    func didSelectTrack(track: TrackDetail)
     func didSelectAlbum(album: Album)
     func didSelectPlaylist(playlist: Playlist)
 }
@@ -87,31 +87,34 @@ class SearchResultsViewController: UIViewController {
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
+        guard let presenter else { return UITableViewCell() }
+        let section = presenter.selectedFilter == .none ? indexPath.section : presenter.sectionIndx
+        
+        switch section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PlaylistTrackViewCell.identifier, for: indexPath) as? PlaylistTrackViewCell else { return UITableViewCell() }
-            guard let track = presenter?.receivedTracks[indexPath.row] else { return UITableViewCell() }
+            let track = presenter.receivedTracks[indexPath.row]
             let viewModel = PlaylistTrackCellViewModel(name: track.name, imageUrl: track.album?.images.getImageUrl(for: .low) ?? "", artists: track.artists.map({ $0.name }), duration: TimeInterval(integerLiteral: Int64(track.duration/1000)).minuteSecond)
             cell.configure(viewModel: viewModel)
             
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCellView.identifier, for: indexPath) as? AlbumCellView else { return UITableViewCell() }
-            guard let album = presenter?.receivedAlbums[indexPath.row] else { return UITableViewCell() }
+            let album = presenter.receivedAlbums[indexPath.row]
             let viewModel = AlbumCellViewModel(name: album.name, imageUrl: album.images.getImageUrl(for: .low) ?? "", artists: album.artists.map { $0.name })
             cell.configure(with: viewModel)
             
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PlaylistCellView.identifier, for: indexPath) as? PlaylistCellView else { return UITableViewCell() }
-            guard let playlist = presenter?.receivedPlaylists[indexPath.row] else { return UITableViewCell() }
+            let playlist = presenter.receivedPlaylists[indexPath.row]
             let viewModel = PlaylistCellViewModel(name: playlist.name, imageUrl: playlist.images.getImageUrl(for: .low) ?? "")
             cell.configure(with: viewModel)
             
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ArtistsCellView.identifier, for: indexPath) as? ArtistsCellView else { return UITableViewCell() }
-            guard let artist = presenter?.receivedArtists[indexPath.row] else { return UITableViewCell() }
+            let artist = presenter.receivedArtists[indexPath.row]
             let viewModel = ArtistsCellViewModel(name: artist.name, imageUrl: artist.images?.getImageUrl(for: .low) ?? "")
             cell.configure(with: viewModel)
             
@@ -122,6 +125,8 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SearchResultsHeaderView.identifier) as? SearchResultsHeaderView else { return nil }
+        
+        guard let presenter, presenter.selectedFilter == .none else { return nil }
         
         header.backgroundView = UIView()
         header.backgroundView?.backgroundColor = .bgColor
@@ -144,15 +149,18 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0: return
-        case 1: 
-            guard let album = presenter?.receivedAlbums[indexPath.row] else { return }
-            
+        guard let presenter else { return }
+        let section = presenter.selectedFilter == .none ? indexPath.section : presenter.sectionIndx
+        
+        switch section {
+        case 0:
+            let track = presenter.receivedTracks[indexPath.row]
+            delegate?.didSelectTrack(track: track)
+        case 1:
+            let album = presenter.receivedAlbums[indexPath.row]
             delegate?.didSelectAlbum(album: album)
         case 2:
-            guard let playlist = presenter?.receivedPlaylists[indexPath.row] else { return }
-            
+            let playlist = presenter.receivedPlaylists[indexPath.row]
             delegate?.didSelectPlaylist(playlist: playlist)
         case 3: return
         default: return
@@ -160,15 +168,19 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        guard let presenter else { return 0 }
+        return presenter.selectedFilter == .none ? 4 : 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0: return presenter?.receivedTracks.count ?? 0
-        case 1: return presenter?.receivedAlbums.count ?? 0
-        case 2: return presenter?.receivedPlaylists.count ?? 0
-        case 3: return presenter?.receivedArtists.count ?? 0
+        guard let presenter else { return 0 }
+        let sectionIndx = presenter.selectedFilter == .none ? section : presenter.sectionIndx
+        
+        switch sectionIndx {
+        case 0: return presenter.receivedTracks.count
+        case 1: return presenter.receivedAlbums.count
+        case 2: return presenter.receivedPlaylists.count
+        case 3: return presenter.receivedArtists.count
         default : return 0
         }
     }

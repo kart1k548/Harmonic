@@ -7,7 +7,7 @@ protocol AuthPresenterProtocol: AnyObject {
 
 class AuthPresenter {
     weak var view: AuthViewControllerProtocol?
-    var model: AuthModel
+    private var model: AuthModel
     
     init(view: AuthViewControllerProtocol, model: AuthModel) {
         self.view = view

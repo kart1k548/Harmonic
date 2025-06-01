@@ -6,7 +6,7 @@ protocol TabBarPresenterProtocol: AnyObject {
 
 class TabBarPresenter {
     weak var view: TabBarViewControllerProtocol?
-    var model: TabBarModel
+    private var model: TabBarModel
     
     init(view: TabBarViewControllerProtocol, model: TabBarModel = TabBarModel()) {
         self.view = view

@@ -5,7 +5,9 @@ final class ImageCache {
     static let shared = ImageCache()
     private let cache = NSCache<NSString, UIImage>()
     
-    private init() { }
+    private init() {
+        cache.totalCostLimit = 10 * 1024 * 1024
+    }
     
     /// Set an image for a given key in the image cache
     /// - parameter image: the image to add to the cache

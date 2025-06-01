@@ -9,7 +9,7 @@ class RecentlyPlayedCellView: UITableViewCell {
             trackImageView,
             labelStackView
         ])
-        stackView.makeStackView(axis: .horizontal, spacing: 8)
+        stackView.makeStackView(axis: .horizontal, spacing: 8, alignment: .center)
         
         return stackView
     }()
@@ -20,14 +20,14 @@ class RecentlyPlayedCellView: UITableViewCell {
             artistsLabel,
             durationLabel
         ])
-        stackView.makeStackView(axis: .vertical, distribution: .fillProportionally)
+        stackView.makeStackView(axis: .vertical, spacing: 4, distribution: .fillProportionally)
         
         return stackView
     }()
     
     private lazy var trackImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.makeImageView(bgColor: .lightPurple, width: 80, cornerRadius: 10, clipsToBounds: true)
+        imageView.makeImageView(bgColor: .lightPurple, width: 90, height: 90, cornerRadius: 10, clipsToBounds: true)
         
         return imageView
     }()

@@ -151,9 +151,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0: return 260
-        case 1: return 96
+        case 1: return UITableView.automaticDimension
         default: return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1, let track = presenter?.recentTracks[indexPath.row] else { return }
+        
+        PlaybackManager.presentPlayer(from: self, track: track)
     }
 }
 

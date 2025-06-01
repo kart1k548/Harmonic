@@ -9,6 +9,7 @@ protocol SearchResultsPresenterProtocol: AnyObject {
     var receivedArtists: [Artist] { get }
     var receivedAudiobooks: [Audiobook] { get }
     var selectedFilter: SearchCategory { get set }
+    var sectionIndx: Int { get }
     var searchText: String { get set }
 }
 
@@ -24,6 +25,16 @@ class SearchResultsPresenter {
 }
 
 extension SearchResultsPresenter: SearchResultsPresenterProtocol {
+    var sectionIndx: Int {
+        switch selectedFilter {
+        case .track: return 0
+        case .album: return 1
+        case .playlist: return 2
+        case .artist: return 3
+        default: return 0
+        }
+    }
+    
     var searchText: String {
         get {
             model.searchText

@@ -9,7 +9,7 @@ protocol HomePresenterProtocol: AnyObject {
 
 class HomePresenter {
     weak var view: HomeViewControllerProtocol?
-    var model: HomeModel
+    private var model: HomeModel
     
     init(view: HomeViewControllerProtocol, model: HomeModel = HomeModel()) {
         self.view = view

@@ -133,6 +133,12 @@ extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1, let track = presenter?.albumTracks[indexPath.row] else { return }
+        
+        PlaybackManager.presentPlayer(from: self, track: track, albumImageUrl: presenter?.albumImageUrl)
+    }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -163,6 +169,10 @@ extension AlbumDetailViewController: AlbumDetailViewControllerProtocol {
 }
 
 extension AlbumDetailViewController: AlbumInfoViewCellDelegate {
+    func didTapPlayButton() {
+        PlaybackManager.presentPlayer(from: self, tracks: presenter?.albumTracks ?? [], albumImageUrl: presenter?.albumImageUrl)
+    }
+    
     func didTapShareButton(button: UIButton) {
         let activityController = UIActivityViewController(activityItems: [presenter?.albumShareUrl ?? ""], applicationActivities: [])
         activityController.popoverPresentationController?.sourceView = button

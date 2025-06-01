@@ -20,6 +20,7 @@ struct TrackDetail: Codable {
     let id: String
     let name: String
     let externalUrls: ExternalUrl
+    let uri: String
     
     enum CodingKeys: String, CodingKey {
         case album
@@ -32,6 +33,7 @@ struct TrackDetail: Codable {
         case id
         case name
         case externalUrls = "external_urls"
+        case uri
     }
 }
 

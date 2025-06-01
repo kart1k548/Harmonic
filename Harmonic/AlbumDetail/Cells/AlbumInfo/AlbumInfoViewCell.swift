@@ -2,6 +2,7 @@ import UIKit
 
 protocol AlbumInfoViewCellDelegate: AnyObject {
     func didTapShareButton(button: UIButton)
+    func didTapPlayButton()
 }
 
 class AlbumInfoViewCell: UITableViewCell {
@@ -114,7 +115,7 @@ class AlbumInfoViewCell: UITableViewCell {
     }
     
     @objc func didTapPlayButton() {
-        //TODO: Implement play button tap
+        delegate?.didTapPlayButton()
     }
     
     @objc func didTapDownloadButton() {

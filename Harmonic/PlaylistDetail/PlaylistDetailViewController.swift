@@ -106,6 +106,12 @@ extension PlaylistDetailViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1, let track = presenter?.playlistTracks[indexPath.row] else { return }
+        
+        PlaybackManager.presentPlayer(from: self, track: track)
+    }
 }
 
 extension PlaylistDetailViewController: PlaylistDetailViewControllerProtocol {
@@ -115,6 +121,10 @@ extension PlaylistDetailViewController: PlaylistDetailViewControllerProtocol {
 }
 
 extension PlaylistDetailViewController: PlaylistInfoViewCellDelegate {
+    func didTapPlayButton() {
+        PlaybackManager.presentPlayer(from: self, tracks: presenter?.playlistTracks ?? [])
+    }
+    
     func didTapShareButton(button: UIButton) {
         let activityController = UIActivityViewController(activityItems: [presenter?.playlistShareUrl ?? ""], applicationActivities: [])
         activityController.popoverPresentationController?.sourceView = button

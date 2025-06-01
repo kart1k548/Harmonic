@@ -145,8 +145,8 @@ extension SearchViewController: SearchViewControllerProtocol {
 }
 
 extension SearchViewController: SearchResultsViewControllerDelegate {
-    func didSelectTrack() {
-        
+    func didSelectTrack(track: TrackDetail) {
+        PlaybackManager.presentPlayer(from: self, track: track)
     }
     
     func didSelectAlbum(album: Album) {

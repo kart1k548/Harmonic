@@ -26,7 +26,7 @@ struct SearchResponseModel: Decodable {
     }
 }
 
-enum SearchCategory: String, CaseIterable {
+enum SearchCategory: String {
     case track
     case album
     case artist
